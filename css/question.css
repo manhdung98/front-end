@@ -1,0 +1,135 @@
+#header{
+	margin-top: 20px;
+}
+.logo{
+	width: 150px;
+}
+.menu{
+	margin-left: 30px;
+}
+
+.menu > a{
+	color: #d99339;
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu > span{
+	color: #d99339;
+}
+.clock{
+	margin-left: 80px;
+}
+
+.text-title{
+	font-size: 15px;
+	color: #BDBDBD;
+    width: 150px;
+    margin: auto;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    z-index: 999;
+    left: 40%;
+    margin-left: -50px;
+    top: -13px;
+}
+.text-title > p{
+	text-align: center;
+}
+.card{
+	border: 2px solid #F7D358;
+}
+.native{
+	color: #d99339;
+}
+
+.request{
+	margin-top: 50px;
+	margin-left: 35%;
+}
+.list-group{
+	margin-top: 30px;
+	align-items: center;
+}
+.list-group > a{
+	width: 500px;
+}
+.list-group-item{
+	padding-left: 40px;
+	margin-top: 15px;
+	font-weight: bold;
+	border-radius: 10px !important;
+	border: 2px solid gray;
+
+}
+.list-group-item:hover{
+	background: #00aaff;
+}
+
+.img-teacher{
+	width: 120px;
+	padding-top: 30px;
+	margin-left: 30px;
+}
+.button-footer{
+	margin-top: 20px;
+	margin-left: 40%;
+}
+.button-footer > button{
+	width: 120px;
+	border-radius: 10px;
+}
+#footer{
+	margin-bottom: 20px;
+}
+.progress-wrapper {
+    width: 100%;
+    height: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.progress{
+	overflow: visible;
+}
+.progress-wrapper .tooltip-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    display: table;
+    transition: .6s ease;
+    margin-left: 0px;
+    background-color: #d99339;
+}
+
+.progress-wrapper .tooltip-box::after {
+    content: " ";
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #dbac69 transparent transparent transparent;
+}
+
+.tooltip-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.progress-proceed {
+    width: 0px;
+    height: 10px;
+    background-color: #d99339;
+}
+.tooltip-text{
+	color: #ffffff;
+}
+.d-flex > a{
+	font-size: 20px;
+}

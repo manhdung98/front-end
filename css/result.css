@@ -1,0 +1,90 @@
+#header{
+	margin-top: 20px;
+	margin-bottom: 70px;
+}
+.logo{
+	width: 150px;
+}
+.menu{
+	margin-left: 30px;
+}
+
+.menu > a{
+	color: #d99339;
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu > span{
+	color: #d99339;
+}
+.clock{
+	margin-left: 80px;
+}
+
+.text-title{
+	font-size: 15px;
+	color: #BDBDBD;
+    width: 150px;
+    margin: auto;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    z-index: 999;
+    left: 40%;
+    margin-left: -50px;
+    top: -13px;
+}
+.text-title > p{
+	text-align: center;
+}
+.card{
+	border: 2px solid #F7D358;
+}
+.native{
+	color: #d99339;
+}
+.d-flex > a{
+	font-size: 20px;
+}
+.score{
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+.comment{
+	font-weight: bold;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #D8D8D8;
+}
+.detail{
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.main-score{
+	margin-left: 20px;
+	color: #FACC2E;
+}
+.or{
+	margin-left: 10px;
+	color: #FACC2E;
+}
+.check{
+	margin-left: 10px;
+	color: #0080FF;
+
+}
+.minus{
+	margin-left: 10px;
+	color: #FE2E2E;
+}
+.number{
+	color: #FACC2E;
+}
+.thead{
+	background-color: #FE9A2E;
+}
+.btn{
+	border-radius: 10px;
+}
+#body-result{
+	margin-bottom: 30px;
+}

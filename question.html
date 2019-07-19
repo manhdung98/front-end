@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Native Gen 5</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
+	<link rel="stylesheet" type="text/css" href="css/question.css">
+</head>
+<body>
+	<header id="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="menu col-md-4">
+					<a href="#">
+						<i onclick="lastPage()" class="fas fa-arrow-left"></i>
+						<img class="logo" src="product/native-gen-5.png">		
+					</a>
+					<span> | </span>
+					<a href="#"><span>Native AI Test</span></a>
+				</div>
+				<div class="clock col-md-2">
+					<div class="text-title">
+						<p>Thời gian học</p>
+					</div>	
+					<div class="card">
+						<h3 class="card-title text-center">
+							<div class="d-flex flex-wrap justify-content-center mt-2">
+								<a><span id="countTime"></span></a> 
+							</div>
+						</h3>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="questions">
+		<div class="container">
+				<div class="request">
+					<span><b>Choose the best word to compelete the sentence.</b></span><br>
+					<span><i>(Chọn đáp án đúng nhất)</i></span>				
+				</div>
+				<div class="list-group">				
+					<a href="#" class="list-group-item list-group-item-action">
+						<label class="form-check-label">
+ 					   		<input type="radio" class="form-check-input" name="optradio"> I am a cup
+  						</label>
+					</a>
+
+					<a href="#" class="list-group-item list-group-item-action">
+						<label class="form-check-label">
+ 					   		<input type="radio" class="form-check-input" name="optradio"> I am a boy
+  						</label>
+					</a>
+
+					<a href="#" class="list-group-item list-group-item-action">
+						<label class="form-check-label">
+ 					   		<input type="radio" class="form-check-input" name="optradio"> I a boy
+  						</label>
+					</a>
+
+					<a href="#" class="list-group-item list-group-item-action">
+						<label class="form-check-label">
+ 					   		<input type="radio" class="form-check-input" name="optradio"> I'm very a boy
+  						</label>
+					</a>
+				</div>
+		</div>
+		<img class="img-teacher" src="product/teacher.png">
+		<footer id="footer">
+			<div id="test-p" class="progress progress-wrapper">
+    			<div id="test-p-bar" class="progress-bar progress-proceed"></div>
+    			<span id="test-p-tooltip-box" class="tooltip-box">
+        			<div id="test-p-tooltip" class="tooltip-text">15/20</div>
+   				</span>
+			</div>
+			<div class="button-footer">
+				<button onclick="lastPage()" type="button" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Previous </button>
+				<button onclick="nextPage()" type="button" class="btn btn-success">Next  <i class="fas fa-arrow-right"></i> </button>
+			</div>
+			
+		</footer>
+	</div>
+	<script type="text/javascript">
+		function lastPage(){
+			window.location = "index.html";
+		}
+		function nextPage(){
+			window.location = "result.html";
+		}
+	</script>
+	<script type="text/javascript">
+		var times = 0;
+	    var hours = 0;
+	    var minutes = 0;
+	    var seconds = 0;
+	    function timer() {
+    	times ++;
+    	seconds = times % 60;
+    	if (seconds == 0) {
+    			minutes++;
+    		}
+    	if (seconds == 60) {
+    		hours ++;
+    		seconds = 0;
+    	}
+    	
+        document.getElementById('countTime').innerHTML = ('0' + hours).slice(-2) + ":" + ('0' + minutes).slice(-2) + ":" + ('0' + seconds).slice(-2);
+    	}
+ 		var countTime =  setInterval('timer()', 1000);
+	</script>
+
+	<script>
+    function renderProgressBar(percentage) {
+        $("#test-p-bar").css("width", percentage + "%");
+
+        var progressWidth = $("#test-p").width();
+        var tooltipWidth = $("#test-p-tooltip-box").width();
+        var tooltipMargin = progressWidth / 100 * percentage - tooltipWidth / 2;
+
+        if (tooltipMargin < 0) {
+            tooltipMargin = 0;
+        } else if (tooltipMargin + tooltipWidth >= progressWidth) {
+            tooltipMargin -= tooltipWidth / 2;
+        }
+
+        $("#test-p-tooltip-box").css("margin-left", tooltipMargin + "px");
+    }
+
+    renderProgressBar(70);
+</script>
+
+</body>
+</html>

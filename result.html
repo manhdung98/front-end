@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+	<link rel="stylesheet" type="text/css" href="css/result.css">
+</head>
+<body>
+	<header id="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="menu col-md-4">
+					<a href="#"">
+						<i onclick="lastPage()" class="fas fa-arrow-left"></i>
+						<img class="logo" src="product/native-gen-5.png">		
+					</a>
+					<span> | </span>
+					<a href="#"><span>Native AI Test</span></a>
+				</div>
+				<div class="clock col-md-2 ">
+					<div class="text-title">
+						<p>Thời gian học</p>
+					</div>	
+					<div class="card">
+						<h3 class="card-title text-center">
+							<div class="d-flex flex-wrap justify-content-center mt-2">
+								<a><span id="countTime"></span></a> 
+							</div>
+						</h3>
+					</div>	
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="body-result">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-3">
+					<img src="product/teacher.png">
+				</div>	
+				<div class="col-md-7">
+					<div class="score">
+						<span>Your score is: </span> 
+						<span class="main-score">5/20</span>
+						<span class="or">|</span>
+						<span class="check"><i class="fas fa-check-square"></i></span><span class="number"> 5</span>
+						<span class="minus"><i class="fas fa-minus-square"></i></span><span class="number"> 15</span>
+					</div>
+					<div class="comment">
+						<span>Your result is not good, but don't worry, let's practice more, it will be better</span>
+					</div>
+					<div class ="detail">
+						<span>Chi tiết bài test của bạn</span>
+					</div>
+					<table class="table">
+						<thead class="thead">
+					    <tr>
+					      <th scope="col">Question Number</th>
+					      <th scope="col">Correct Answer</th>
+					      <th scope="col">Your Answer</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td>1</td>
+					      <td>my name is mine</td>
+					      <td>The ball is near the pool</td>   
+					    </tr>
+					    <tr>
+					      <td>2</td>
+					      <td>my name is mine</td>
+					      <td>The ball is near the pool</td> 
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>my name is mine</td>
+					      <td>The ball is near the pool</td> 
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>my name is mine</td>
+					      <td>The ball is near the pool</td> 
+					    </tr>
+					    <tr>
+					      <td>3</td>
+					      <td>my name is mine</td>
+					      <td>The ball is near the pool</td> 
+					    </tr>
+					  </tbody>
+					</table>
+					<button onclick="nextPage()" type="button" class="btn btn-success">Làm lại bài test <i class="fas fa-arrow-right"></i></button>
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<script type="text/javascript">
+		function nextPage(){
+			window.location = "index.html";
+		}
+	</script>
+	<script type="text/javascript">
+		var times = 0;
+	    var hours = 0;
+	    var minutes = 0;
+	    var seconds = 0;
+	    function timer() {
+    	times ++;
+    	seconds = times % 60;
+    	if (seconds == 0) {
+    			minutes++;
+    		}
+    	if (seconds == 60) {
+    		hours ++;
+    		seconds = 0;
+    	}
+    	
+        document.getElementById('countTime').innerHTML = ('0' + hours).slice(-2) + ":" + ('0' + minutes).slice(-2) + ":" + ('0' + seconds).slice(-2);
+    	}
+ 		var countTime =  setInterval('timer()', 1000);
+	</script>
+</body>
+
+</html>
